@@ -1,10 +1,10 @@
 <template>
-  <div class="about">这里是关于界面</div>
+  <div class="api">这里是api界面</div>
 </template>
 
 <script>
 export default {
-  name:'About',
+  name:'Api',
 }
 </script>
 

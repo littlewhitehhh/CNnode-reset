@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="hhh">
+      这里是home页面
+      <contain-item></contain-item>
+      <contain-aside></contain-aside>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import containItem from '../components/content/contain/containItem.vue'
+import containAside from '../components/content/aside/containAside.vue'
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  name:'home',
+  components:{
+    containItem,
+    containAside
   }
 }
 </script>
+
+<style>
+
+</style>
