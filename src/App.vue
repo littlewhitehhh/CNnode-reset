@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    <!-- 头部导航栏 -->
     <head-nav-bar></head-nav-bar>
+    <!-- 路由占位符 -->
     <router-view/>
   </div>
 </template>
@@ -18,6 +20,16 @@ export default {
    margin: 0;
    padding: 0;
    list-style: none;
+   background-color: #e1e1e1;
  }
-  
+ a{
+    text-decoration: none;
+    color: black;
+ }
+ a:hover{
+   text-decoration: underline;
+ }
+li{
+  list-style: none;
+}
 </style>

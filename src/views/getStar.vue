@@ -1,10 +1,16 @@
 <template>
-  <div class="getStar">这里是getStar界面</div>
+  <div class="getStar">
+    <get-star-content></get-star-content>
+  </div>
 </template>
 
 <script>
+import getStarContent from '../components/content/getStarChildren/getStarContent.vue'
 export default {
   name:'getStar',
+  components:{
+    getStarContent
+  }
 }
 </script>
 
