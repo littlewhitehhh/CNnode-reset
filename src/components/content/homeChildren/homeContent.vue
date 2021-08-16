@@ -1,7 +1,10 @@
 <template>
-    <div class="contain">     
-      <!-- 导航栏区域 -->
-        <div class="containNavBar">  
+  <div class="homeContent">
+    <container>
+      <!-- 使用插槽 -->
+        <template slot="mainContent">
+          <!-- 导航栏区域 -->
+          <div class="containNavBar">  
             <div class="navBarItem"
                  v-for="(item,index) in navBarList"
                 :key="index"
@@ -10,24 +13,27 @@
               {{item.title}}
             </div>
         </div>
-
-      <!-- 内容展示区域 -->
+          <!-- 内容展示区域 -->
       <list-item v-for="(item) in itemLists" :key="item.id" :listItem="item" class="list-item"></list-item>
-    </div>
+    
+        </template>
+        <template slot="asideContent ">
+        </template>
+    </container>
+  </div>
 </template>
 
 <script>
-// 引入导航栏和列表栏组件
-// import containNavBar from './containChildren/containNavBar.vue'
-import listItem from '../homeChildren/listItem.vue'
+import Container from '../../common/container/container.vue'
+import listItem from './listItem.vue'
 
 // 引入api
 import {getTopic} from '../../../network/api'
-export default {
-  name:'contain',
+export default {  
+  name:'homeContent',
   components:{
-    // containNavBar,
-    listItem 
+    Container,
+    listItem
   },
   data() {
     return {
@@ -64,7 +70,6 @@ export default {
   
       // 内容数据
       itemLists:[],
-      
     }
   },
   created() {
@@ -73,7 +78,6 @@ export default {
       // let data = new Date('2021-08-16T03:49:41.386Z')
       // console.log(data);
     })
-    
   },
   methods: {
     // 改变navBar标题 显示不同的内容
@@ -89,14 +93,13 @@ export default {
     }
   },
 
-
 }
 </script>
 
-<style scoped> 
-  .contain{
+<style scoped>
+/* .contain{
     background-color: #fff;
-  }
+  } */
   .containNavBar{
     background-color: #f6f6f6;
     height: 50px;

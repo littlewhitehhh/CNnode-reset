@@ -1,21 +1,21 @@
 <template>
   <div class="home">
-    <div class="container">  
+    <!-- <div class="container">  
       <div class="main">
         <contain-item></contain-item>
        </div>
       <div class="aside">
-        <!-- 右边侧边栏 -->
         <contain-aside></contain-aside>
       </div>
-    </div>
-      
+    </div> -->
+     <home-content></home-content>   
   </div>
 </template>
 
 <script>
-import containItem from '../components/content/contain/containItem.vue'
-import containAside from '../components/content/aside/containAside.vue'
+// import containItem from '../components/content/contain/containItem.vue'
+// import containAside from '../components/content/aside/containAside.vue'
+import homeContent from '../components/content/homeChildren/homeContent.vue'
 
 // 引入api
  
@@ -23,8 +23,10 @@ import containAside from '../components/content/aside/containAside.vue'
 export default {
   name:'home',
   components:{
-    containItem,
-    containAside
+    // containItem,
+    // containAside,
+    homeContent 
+
   },
   data() {
     return {
@@ -43,7 +45,7 @@ export default {
 }
 </script>
 
-<style sscoped>
+<style scoped>
   .container{  
     display: flex;
     margin: 20px auto 0;

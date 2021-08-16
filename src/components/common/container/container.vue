@@ -3,10 +3,14 @@
   <div class="container">
     <div class="main">
       <!-- 定义具名插槽 -->
-      <slot name="mainContent"></slot>
+      <slot name="mainContent">
+
+      </slot>
     </div>
     <div class="aside">
-      <slot name="asideContent"></slot>
+      <slot name="asideContent">
+        hhh
+      </slot>
     </div>
   </div>
 </template>
@@ -17,16 +21,15 @@ export default {
 }
 </script>
 
-<style sscoped>
+<style scoped>
   .container{  
     display: flex;
-    margin: 20px auto 0;
-    
+    margin: 20px auto 0; 
     width: 90%;
   }
   .main{
     flex: 1;
-    background-color: pink;
+    background-color: #fff;
   }
   .aside {
     margin-left:20px;

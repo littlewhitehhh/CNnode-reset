@@ -41,9 +41,6 @@ export default {
     line-height:50px;
     display: flex;
     align-items: center;
-    /* 设置子元素是否换行 */
-    
-
   }
   .author {
     margin-left:14px ;
@@ -72,11 +69,12 @@ export default {
   .title{
     margin-left: 14px;
     /* display: flex; */
-    /* flex-wrap: nowrap; */
-    overflow: hidden;
+    width: 70%;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis
   }
+  
   .lastReply{
     flex: 1;
     

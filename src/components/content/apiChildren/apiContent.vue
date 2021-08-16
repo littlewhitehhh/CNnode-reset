@@ -1,5 +1,5 @@
 <template>
-    <div class="getStarContent">
+    <div class="apiContent">
       <container>
         <!-- 使用具名插槽 -->
       <template slot="mainContent">
@@ -38,7 +38,7 @@ import Breadcrumb from '../../common/Breadcrumb/Breadcrumb.vue'
 // 内容展示没模块
 import contentModule from '../../common/content/content-module.vue'
 export default {
-  name:'getStarContent',
+  name:'api',
   components:{
      Container,
      Breadcrumb,

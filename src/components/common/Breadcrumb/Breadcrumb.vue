@@ -2,7 +2,7 @@
 
 <!-- 面包屑导航 -->
   <div class="bread-crumb">
-    <span class="s1"><router-link to="/home" class="link">主页</router-link></span> 
+    <span class="s1"><router-link to="/home?index=0" class="link">主页</router-link></span> 
     <span class="s2">/</span>
     <span class="s3">???</span>
   </div>
