@@ -5,6 +5,8 @@ import router from './router'
 
 // 全局引入iconfont样式表
 import './assets/css/iconfont.css'
+// 引入 markdonw语法样式
+import './assets/css/markdown-github.css'
 
 
 Vue.config.productionTip = false

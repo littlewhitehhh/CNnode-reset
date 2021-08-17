@@ -3,14 +3,10 @@
   <div class="container">
     <div class="main">
       <!-- 定义具名插槽 -->
-      <slot name="mainContent">
-
-      </slot>
+      <slot name="mainContent"></slot>
     </div>
     <div class="aside">
-      <slot name="asideContent">
-        hhh
-      </slot>
+      <slot name="asideContent"></slot>
     </div>
   </div>
 </template>
@@ -24,7 +20,7 @@ export default {
 <style scoped>
   .container{  
     display: flex;
-    margin: 20px auto 0; 
+    margin: 20px auto ; 
     width: 90%;
   }
   .main{
@@ -34,6 +30,6 @@ export default {
   .aside {
     margin-left:20px;
     min-width: 290px;
-    background: red;
+    background: #e1e1e1;
   }
 </style>

@@ -33,7 +33,13 @@
            </template>
          </content-module>
 
-      </template>   
+      </template> 
+
+      <template slot="asideContent">
+      <aside-item></aside-item>
+          
+        
+      </template>  
     </container> 
   </div>
 </template>
@@ -42,12 +48,15 @@
 import Container from '../../common/container/container.vue'
 import Breadcrumb from '../../common/Breadcrumb/Breadcrumb.vue'
 import contentModule from '../../common/content/content-module.vue'
+import asideItem from '../../common/aside/asideItem.vue'
+
 export default {
   name:'aboutContent',
   components:{
     Container,
     Breadcrumb,
-    contentModule 
+    contentModule ,
+    asideItem
   }
 }
 </script>

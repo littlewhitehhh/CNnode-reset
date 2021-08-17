@@ -24,7 +24,7 @@
       </template> 
        <!-- 使用具名插槽 -->
       <template slot="asideContent">
-        hahaha
+        <aside-item></aside-item>
       </template>  
       </container>
     </div>
@@ -37,12 +37,15 @@ import  Container from '../../common/container/container.vue'
 import Breadcrumb from '../../common/Breadcrumb/Breadcrumb.vue'
 // 内容展示没模块
 import contentModule from '../../common/content/content-module.vue'
+import asideItem from '../../common/aside/asideItem.vue'
+
 export default {
   name:'getStarContent',
   components:{
      Container,
      Breadcrumb,
-     contentModule
+     contentModule,
+     asideItem
   },
   data() {
     return {

@@ -12,6 +12,9 @@ import Api from '../views/Api.vue'
 import About from '../views/About.vue'
 import Register from '../views/Register.vue'
 import signIn from '../views/signIn.vue'
+import topicDetail from '../views/topicDetail'
+import userInfo from '../views/userInfo'
+
 
 Vue.use(VueRouter)
 
@@ -52,6 +55,18 @@ const routes = [{
         name: 'signIn',
         component: signIn
     },
+    // 文章详情
+    {
+        path: '/topic/:id',
+        name: 'topicDetail',
+        component: topicDetail
+    },
+    // 用户详情
+    {
+        path: '/user/:loginname',
+        name: 'userInfo',
+        component: userInfo
+    }
 
 ]
 

@@ -72,13 +72,18 @@ export default {
       currentIndex : 0
     }
   },
+  created(){
+    this.currentIndex = window.sessionStorage.getItem('navIndex')
+  },
   methods: {
     jumpTo(item,index){
       this.$router.push(item.path)
       console.log(item.path);
       this.currentIndex = index
+      window.sessionStorage.setItem('navIndex',index)
     }
   },
+
 }
 </script>
 

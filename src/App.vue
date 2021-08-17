@@ -32,4 +32,8 @@ export default {
 li{
   list-style: none;
 }
+/* body,div,span,a,p,ul,li{
+  padding: 0;
+  margin: 0;
+} */
 </style>

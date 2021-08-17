@@ -2,7 +2,10 @@
     <div class="listItem">
       <!-- 作者头像 -->
       <div class="author">
-        <img :src="listItem.author.avatar_url" :title="listItem.author.loginname" :alt="listItem.author.loginname">
+        <router-link :to="'/user/' + listItem.author.loginname">
+          <img :src="listItem.author.avatar_url" :title="listItem.author.loginname" :alt="listItem.author.loginname">
+        </router-link>
+        
       </div>
       <!-- 转发和浏览 -->
       <div class="reply-visit">{{replyAndVisit}}</div>
@@ -12,10 +15,13 @@
 
       <!-- <div class="top" v-else-if="listItem.tab == share">分享</div> -->
       <!-- <div class="top" v-if="listItem.top == true">指定</div> -->
+     
+     
+      <!-- 标题 -->
       <div class="title">
-        <router-link to="/" class="link">{{listItem.title}}</router-link>
+        <router-link :to="'/topic/' + listItem.id" class="link">{{listItem.title}}</router-link>
       </div>
-
+      <!-- 最后回复事件 -->
       <div class="lastReply">
        <span> {{listItem.last_reply_at | formatDate}}</span>
       </div>
@@ -43,6 +49,8 @@ export default {
     align-items: center;
   }
   .author {
+    /* float: left; */
+    /* margin-top: 5px; */
     margin-left:14px ;
     height: 40px;
     overflow: hidden;
@@ -51,6 +59,7 @@ export default {
     height: 100%;
   }
   .reply-visit{
+    /* float: left; */
     font-size: 12px;
     color: #b4b4c5;
     margin-left: 14px;
@@ -68,7 +77,7 @@ export default {
   }
   .title{
     margin-left: 14px;
-    /* display: flex; */
+    /* display: flex;git */
     width: 70%;
     text-overflow: ellipsis;
     overflow-x: hidden;

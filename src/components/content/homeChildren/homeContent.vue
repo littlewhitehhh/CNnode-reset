@@ -17,7 +17,9 @@
       <list-item v-for="(item) in itemLists" :key="item.id" :listItem="item" class="list-item"></list-item>
     
         </template>
-        <template slot="asideContent ">
+        <template slot="asideContent">
+          <!-- 引入侧边元素组件 -->
+          <aside-item></aside-item>
         </template>
     </container>
   </div>
@@ -26,6 +28,7 @@
 <script>
 import Container from '../../common/container/container.vue'
 import listItem from './listItem.vue'
+import asideItem from '../../common/aside/asideItem.vue'
 
 // 引入api
 import {getTopic} from '../../../network/api'
@@ -33,7 +36,8 @@ export default {
   name:'homeContent',
   components:{
     Container,
-    listItem
+    listItem,
+    asideItem
   },
   data() {
     return {
@@ -78,12 +82,14 @@ export default {
       // let data = new Date('2021-08-16T03:49:41.386Z')
       // console.log(data);
     })
+    this.currentIndex = window.sessionStorage.getItem('topicIndex')
   },
   methods: {
     // 改变navBar标题 显示不同的内容
     changeNavItem(item,index){
         // console.log(item.tab);
         this.currentIndex =  index
+        window.sessionStorage.setItem('topicIndex',index)
         getTopic(this.currentPage,item.tab).then(res=>{
           // console.log(res);
           this.itemLists = res.data.data
